@@ -1,0 +1,21 @@
+{
+ "align_labels_right": 0,
+ "creation": "2024-01-15 14:10:00.000000",
+ "docstatus": 0,
+ "doctype": "Print Format",
+ "disabled": 0,
+ "doc_type": "Waybill",
+ "format": "HTML",
+ "html": null,
+ "line_break": 0,
+ "modified": "2024-01-15 14:10:00.000000",
+ "modified_by": "Administrator",
+ "module": "Cargo Flow",
+ "name": "Waybill Print Format",
+ "owner": "Administrator",
+ "print_format_builder": 0,
+ "print_format_type": "Jinja",
+ "raw_printing": 0,
+ "show_section_headings": 0,
+ "standard": "Yes"
+}

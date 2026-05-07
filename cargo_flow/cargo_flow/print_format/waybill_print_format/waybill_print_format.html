@@ -1,0 +1,61 @@
+<style>
+    .waybill-header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+    .waybill-title { font-size: 24px; font-weight: bold; text-transform: uppercase; }
+    .info-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    .info-table td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    .label { font-weight: bold; color: #555; width: 30%; }
+    .barcode { text-align: center; margin-top: 30px; }
+</style>
+
+<div class="waybill-header">
+    <div class="waybill-title">Waybill / Consignment Note</div>
+    <div>{{ doc.name }}</div>
+</div>
+
+<table class="info-table">
+    <tr>
+        <td class="label">Customer</td>
+        <td>{{ doc.customer }}</td>
+    </tr>
+    <tr>
+        <td class="label">Delivery Note</td>
+        <td>{{ doc.delivery_note or "N/A" }}</td>
+    </tr>
+    <tr>
+        <td class="label">Origin Warehouse</td>
+        <td>{{ doc.origin_warehouse or "N/A" }}</td>
+    </tr>
+    <tr>
+        <td class="label">Destination Address</td>
+        <td>{{ doc.destination_address }}</td>
+    </tr>
+</table>
+
+<table class="info-table">
+    <tr style="background-color: #f9f9f9;">
+        <td class="label">Cargo Weight</td>
+        <td>{{ doc.weight }} Kg</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+        <td class="label">Cargo Volume</td>
+        <td>{{ doc.volume }} m³</td>
+    </tr>
+</table>
+
+<div style="margin-top: 50px;">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 50%; text-align: center; border-top: 1px solid #333; padding-top: 5px;">
+                Dispatcher Signature
+            </td>
+            <td style="width: 50%; text-align: center; border-top: 1px solid #333; padding-top: 5px;">
+                Receiver Signature
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="barcode">
+    <img src="/api/method/frappe.utils.make_barcode?code={{ doc.name }}&type=Code128" style="max-height: 60px;">
+    <div style="font-size: 10px;">{{ doc.name }}</div>
+</div>

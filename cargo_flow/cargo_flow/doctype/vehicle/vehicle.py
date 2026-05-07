@@ -13,3 +13,13 @@ class Vehicle(Document):
             frappe.throw(frappe._("Volume (m³) cannot be negative."))
         if self.current_odometer is not None and self.current_odometer < 0:
             frappe.throw(frappe._("Current Odometer cannot be negative."))
+
+    def get_indicator(self):
+        status_colors = {
+            "Available": "green",
+            "On Trip": "blue",
+            "Maintenance": "orange",
+            "Out of Service": "red"
+        }
+        return status_colors.get(self.status, "gray"), self.status
+

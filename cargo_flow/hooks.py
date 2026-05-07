@@ -23,3 +23,18 @@ fixtures = [
         "filters": [["name", "=", "Cargo Flow Dashboard"]]
     }
 ]
+
+# ------------------------------------------------------------------
+# Client Scripts
+# ------------------------------------------------------------------
+doctype_js = {
+    "Delivery Note": "public/js/delivery_note_ui.js"
+}
+
+# ------------------------------------------------------------------
+# Branding
+# ------------------------------------------------------------------
+app_logo_url = "/assets/cargo_flow/images/cargo_flow_logo.png"
+app_icon = "truck"
+app_color = "#3498db"
+

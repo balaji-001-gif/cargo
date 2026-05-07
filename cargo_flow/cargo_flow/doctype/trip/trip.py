@@ -189,3 +189,13 @@ class Trip(Document):
             indicator="green",
             title=frappe._("Trip Completed")
         )
+
+    def get_indicator(self):
+        status_colors = {
+            "Planned": "gray",
+            "Active": "blue",
+            "Completed": "green",
+            "Cancelled": "red"
+        }
+        return status_colors.get(self.status, "gray"), self.status
+
