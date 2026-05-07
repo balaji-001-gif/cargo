@@ -1,6 +1,16 @@
 {
  "allow_customization": 1,
- "content": "[{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trip\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Waybill\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fleet Utilization\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Fleet & Drivers\",\"col\":12}}]",
+ "charts": [
+  {
+   "chart_name": "Vehicle Status Distribution",
+   "label": "Vehicle Fleet Status"
+  },
+  {
+   "chart_name": "Trip Status Distribution",
+   "label": "Operational Overview"
+  }
+ ],
+ "content": "[{\"type\":\"chart\",\"data\":{\"chart_name\":\"Vehicle Status Distribution\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Trip Status Distribution\",\"col\":6}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Active Trips\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Draft Waybills\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fleet Utilization\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Fleet & Drivers\",\"col\":12}}]",
  "creation": "2024-01-15 12:00:00.000000",
  "docstatus": 0,
  "doctype": "Workspace",
