@@ -10,9 +10,10 @@ app_license = "mit"
 # ------------------------------------------------------------------
 doc_events = {
     "Delivery Note": {
-        "on_submit": "cargo_flow.cargo_flow.doctype.waybill.waybill.create_waybill_from_dn"
+        "on_submit": "cargo_flow.doctype.waybill.waybill.create_waybill_from_dn"
     }
 }
+
 
 # ------------------------------------------------------------------
 # Fixtures — export workspace so it ships with the app

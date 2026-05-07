@@ -1,1 +1,0 @@
-# Inner application module package
