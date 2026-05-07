@@ -9,9 +9,7 @@ authors = [
 ]
 description = "Logistics and Transportation Management app for ERPNext v15"
 requires-python = ">=3.10"
-dependencies = [
-    "frappe>=15.0.0"
-]
+dependencies = []
 readme = "README.md"
 dynamic = ["version"]
 
