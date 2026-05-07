@@ -1,0 +1,18 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2024-01-15 13:00:00.000000",
+ "doctype": "Notification",
+ "enabled": 1,
+ "event": "Value Change",
+ "value_changed": "status",
+ "is_standard": 1,
+ "message": "<p>Dear Team,</p>\n<p>The status of Trip <strong>{{ doc.name }}</strong> has been updated.</p>\n<table style=\"border-collapse:collapse;width:100%\">\n  <tr style=\"background:#f5f5f5\">\n    <td style=\"padding:8px;border:1px solid #ddd\"><strong>Trip</strong></td>\n    <td style=\"padding:8px;border:1px solid #ddd\">{{ doc.name }}</td>\n  </tr>\n  <tr>\n    <td style=\"padding:8px;border:1px solid #ddd\"><strong>New Status</strong></td>\n    <td style=\"padding:8px;border:1px solid #ddd\">{{ doc.status }}</td>\n  </tr>\n  <tr style=\"background:#f5f5f5\">\n    <td style=\"padding:8px;border:1px solid #ddd\"><strong>Driver</strong></td>\n    <td style=\"padding:8px;border:1px solid #ddd\">{{ doc.driver }}</td>\n  </tr>\n  <tr>\n    <td style=\"padding:8px;border:1px solid #ddd\"><strong>Vehicle</strong></td>\n    <td style=\"padding:8px;border:1px solid #ddd\">{{ doc.vehicle }}</td>\n  </tr>\n  <tr style=\"background:#f5f5f5\">\n    <td style=\"padding:8px;border:1px solid #ddd\"><strong>Departure Time</strong></td>\n    <td style=\"padding:8px;border:1px solid #ddd\">{{ doc.departure_time }}</td>\n  </tr>\n</table>\n<p style=\"margin-top:16px\">Please take appropriate action if required.</p>\n<p>Regards,<br>Cargo Flow System</p>",
+ "subject": "Trip Status Update: {{ doc.name }} → {{ doc.status }}",
+ "document_type": "Trip",
+ "send_to_all_assignees": 1,
+ "modified": "2024-01-15 13:00:00.000000",
+ "module": "Cargo Flow",
+ "name": "Trip Status Update Alert",
+ "owner": "Administrator"
+}

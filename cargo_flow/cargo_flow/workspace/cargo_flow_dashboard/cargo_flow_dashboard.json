@@ -1,0 +1,101 @@
+{
+ "allow_customization": 1,
+ "content": "[{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trip\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Waybill\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fleet Utilization\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Fleet & Drivers\",\"col\":12}}]",
+ "creation": "2024-01-15 12:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "icon": "truck",
+ "indicator_color": "green",
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Cargo Flow",
+ "modified": "2024-01-15 12:00:00.000000",
+ "module": "Cargo Flow",
+ "name": "Cargo Flow Dashboard",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "format": "{} Active",
+   "label": "Active Trips",
+   "link_to": "Trip",
+   "stats_filter": "[[\"Trip\",\"status\",\"=\",\"Active\"]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "format": "{} Draft",
+   "label": "Draft Waybills",
+   "link_to": "Waybill",
+   "stats_filter": "[[\"Waybill\",\"status\",\"=\",\"Draft\"]]",
+   "type": "DocType"
+  },
+  {
+   "label": "Fleet Utilization",
+   "link_to": "Fleet Utilization",
+   "type": "Report"
+  }
+ ],
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operations",
+   "link_count": 0,
+   "onboard": 1,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "label": "Trips",
+   "link_to": "Trip",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "label": "Waybills",
+   "link_to": "Waybill",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fleet & Drivers",
+   "link_count": 0,
+   "onboard": 1,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "label": "Vehicles",
+   "link_to": "Vehicle",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "label": "Drivers",
+   "link_to": "Driver",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Fleet Utilization Report",
+   "link_to": "Fleet Utilization",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ]
+}

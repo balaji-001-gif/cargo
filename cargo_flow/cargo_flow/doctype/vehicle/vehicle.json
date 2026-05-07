@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-15 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_details",
+  "license_plate",
+  "model",
+  "status",
+  "cb_specifications",
+  "capacity_kg",
+  "volume_m3",
+  "sec_odometer",
+  "current_odometer"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle_details",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Details"
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "License Plate",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model"
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Available\nOn Trip\nMaintenance\nOut of Service"
+  },
+  {
+   "fieldname": "cb_specifications",
+   "fieldtype": "Column Break",
+   "label": "Specifications"
+  },
+  {
+   "fieldname": "capacity_kg",
+   "fieldtype": "Float",
+   "label": "Capacity (Kg)"
+  },
+  {
+   "fieldname": "volume_m3",
+   "fieldtype": "Float",
+   "label": "Volume (m³)"
+  },
+  {
+   "fieldname": "sec_odometer",
+   "fieldtype": "Section Break",
+   "label": "Odometer"
+  },
+  {
+   "default": "0",
+   "fieldname": "current_odometer",
+   "fieldtype": "Float",
+   "label": "Current Odometer (km)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-15 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Cargo Flow",
+ "name": "Vehicle",
+ "naming_rule": "By fieldname",
+ "autoname": "field:license_plate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Logistics Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "states": [],
+ "track_changes": 1
+}

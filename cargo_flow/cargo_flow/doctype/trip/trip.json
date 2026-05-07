@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2024-01-15 10:30:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_assignment",
+  "vehicle",
+  "driver",
+  "status",
+  "col_assignment",
+  "departure_time",
+  "actual_arrival_time",
+  "sec_odometer",
+  "start_odometer",
+  "end_odometer",
+  "sec_waybills",
+  "waybills"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_assignment",
+   "fieldtype": "Section Break",
+   "label": "Assignments"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "options": "Vehicle",
+   "in_list_view": 1,
+   "label": "Vehicle Assigned",
+   "reqd": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "options": "Driver",
+   "in_list_view": 1,
+   "label": "Driver Assigned",
+   "reqd": 1
+  },
+  {
+   "default": "Planned",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Trip Status",
+   "options": "Planned\nActive\nCompleted\nCancelled",
+   "read_only": 0,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "col_assignment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "departure_time",
+   "fieldtype": "Datetime",
+   "label": "Departure Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_arrival_time",
+   "fieldtype": "Datetime",
+   "label": "Actual Arrival Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_odometer",
+   "fieldtype": "Section Break",
+   "label": "Odometer Tracking"
+  },
+  {
+   "fieldname": "start_odometer",
+   "fieldtype": "Float",
+   "label": "Start Odometer (km)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_odometer",
+   "fieldtype": "Float",
+   "label": "End Odometer (km)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_waybills",
+   "fieldtype": "Section Break",
+   "label": "Waybills / Cargo"
+  },
+  {
+   "fieldname": "waybills",
+   "fieldtype": "Table",
+   "options": "Trip Waybill",
+   "label": "Waybills List",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-15 10:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Cargo Flow",
+ "name": "Trip",
+ "naming_rule": "Naming Series",
+ "autoname": "TRIP-.YYYY.-.#####",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Logistics Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "states": [],
+ "track_changes": 1
+}

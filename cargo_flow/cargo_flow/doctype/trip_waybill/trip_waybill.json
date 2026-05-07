@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2024-01-15 10:25:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "waybill",
+  "customer",
+  "weight",
+  "volume"
+ ],
+ "fields": [
+  {
+   "fieldname": "waybill",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Waybill",
+   "options": "Waybill",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight (Kg)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "volume",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Volume (m³)",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-15 10:25:00.000000",
+ "modified_by": "Administrator",
+ "module": "Cargo Flow",
+ "name": "Trip Waybill",
+ "owner": "Administrator",
+ "permissions": [],
+ "states": []
+}

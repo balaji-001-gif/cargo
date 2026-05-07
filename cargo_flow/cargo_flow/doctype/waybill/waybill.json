@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-15 10:20:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sec_general",
+  "customer",
+  "delivery_note",
+  "status",
+  "col_general",
+  "origin_warehouse",
+  "destination_address",
+  "sec_cargo_details",
+  "weight",
+  "volume"
+ ],
+ "fields": [
+  {
+   "fieldname": "sec_general",
+   "fieldtype": "Section Break",
+   "label": "General Details"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "options": "Customer",
+   "in_list_view": 1,
+   "label": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Link",
+   "options": "Delivery Note",
+   "in_list_view": 1,
+   "label": "ERPNext Delivery Note",
+   "unique": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nScheduled\nLoaded\nDelivered\nCancelled"
+  },
+  {
+   "fieldname": "col_general",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "origin_warehouse",
+   "fieldtype": "Link",
+   "options": "Warehouse",
+   "label": "Origin Warehouse"
+  },
+  {
+   "fieldname": "destination_address",
+   "fieldtype": "Small Text",
+   "label": "Destination Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sec_cargo_details",
+   "fieldtype": "Section Break",
+   "label": "Cargo Dimensions"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight (Kg)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "volume",
+   "fieldtype": "Float",
+   "label": "Volume (m³)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-15 10:20:00.000000",
+ "modified_by": "Administrator",
+ "module": "Cargo Flow",
+ "name": "Waybill",
+ "naming_rule": "Naming Series",
+ "autoname": "WAY-.YYYY.-.#####",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Logistics Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "states": [],
+ "track_changes": 1
+}

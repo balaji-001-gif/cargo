@@ -1,0 +1,19 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "cargo_flow"
+authors = [
+    {name = "Your Organization", email = "info@yourorg.com"}
+]
+description = "Logistics and Transportation Management app for ERPNext v15"
+requires-python = ">=3.10"
+dependencies = [
+    "frappe>=15.0.0"
+]
+readme = "README.md"
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/balaji-001-gif/cargo.git"
